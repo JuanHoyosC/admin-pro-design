@@ -11,27 +11,27 @@
 
 <body class="min-h-screen bg-slate-300 dark:bg-neutral-950">
     <header
-        class="sticky top-0 z-10 px-6 py-2 flex items-center bg-white dark:bg-neutral-800 shadow-lg dark:shadow-neutral-950">
-        <nav class="w-full flex items-center justify-between">
+        class="sticky top-0 z-10 px-4 md:px-6 py-2 flex items-center bg-white dark:bg-neutral-800 shadow-lg dark:shadow-neutral-950">
+        <nav class="w-full flex gap-4 items-center justify-between">
            <div class="flex items-center gap-2">
             <button class="block outline-none md:hidden dark:text-white text-xl md:invisible" id="btn-menu"><i
                 class="fa-solid fa-bars"></i></button>
-            <h2 class="text-2xl m-0 font-extrabold"><span class="dark:text-white">Admin</span><span
+            <h2 class="text-xl md:text-2xl m-0 font-extrabold"><span class="dark:text-white">Admin</span><span
                     class="text-pink-500">Pro</span></h2>
            </div>
-            <div class="hidden md:flex bg-slate-300 dark:bg-neutral-950 relative items-center rounded-md overflow-hidden">
+            <div class="fixed md:relative bottom-4 md:bottom-0 right-4 md:right-0 block bg-slate-600 md:flex md:bg-slate-300 md:dark:bg-neutral-950  items-center rounded-md overflow-hidden">
                 <button class="relative outline-none z-10 bg-transparent text-white p-2 px-4" id="btn-sun"><i
                         class="fa-solid fa-sun"></i></button>
                 <button class="relative outline-none z-10 bg-transparent text-white p-2 px-4" id="btn-moon"><i
                         class="fa-solid fa-moon"></i></button>
-                <div class="bg-pink-500 translate-x-0 transition-transform duration-500 absolute h-full w-6/12 z-0"
+                <div class="bg-pink-500 translate-x-0 transition-transform duration-500 absolute top-0 h-full w-6/12 z-0"
                     id="toggle"></div>
             </div>
             <div class="flex gap-4 items-center">
-                <p class="dark:text-white text-sm">Hey, <span class="font-bold">Jon Doe</span> <small
+                <p class="dark:text-white text-xs md:text-sm">Hey, <span class="font-bold">Jon Doe</span> <small
                         class="dark:text-white text-xs block">admin</small></p>
 
-                <img src="/assets/images/profile.png" alt="profile" class="w-12 h-12 rounded-full object-cover"
+                <img src="/assets/images/profile.png" alt="profile" class="min-h-[2.5rem] min-w-[2.5rem] w-10 h-10 rounded-full object-cover"
                     srcset="">
             </div>
         </nav>
@@ -170,24 +170,24 @@
                             </thead>
                             <tbody>
                                 <tr class="border-b dark:border-neutral-800 pb-2">
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Javascript</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">2423</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Due</td>
-                                    <td class="text-center text-sm  p-2 text-yellow-500">Pending</td>
-                                    <td class="text-center text-sm  p-2 text-blue-500">Detail</td>
+                                    <td data-label="Course name" class="text-center text-sm dark:text-gray-300 p-2">Javascript</td>
+                                    <td data-label="Course number" class="text-center text-sm dark:text-gray-300 p-2">2423</td>
+                                    <td data-label="Payment" class="text-center text-sm dark:text-gray-300 p-2">Due</td>
+                                    <td data-label="Status" class="text-center text-sm  p-2 text-yellow-500">Pending</td>
+                                    <td data-label="" class="text-center text-sm  p-2 text-blue-500">Detail</td>
                                 </tr>
                                 <tr class="border-b dark:border-neutral-800 pb-2">
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Css avanced</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">4215</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Refunded</td>
-                                    <td class="text-center text-sm  p-2 text-red-500">Declained</td>
+                                    <td data-label="Course name" class="text-center text-sm dark:text-gray-300 p-2">Css avanced</td>
+                                    <td data-label="Course number" class="text-center text-sm dark:text-gray-300 p-2">4215</td>
+                                    <td data-label="Payment" class="text-center text-sm dark:text-gray-300 p-2">Refunded</td>
+                                    <td data-label="Status" class="text-center text-sm  p-2 text-red-500">Declained</td>
                                     <td class="text-center text-sm  p-2 text-blue-500">Detail</td>
                                 </tr>
                                 <tr class="pb-2">
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Html avanced</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">8631</td>
-                                    <td class="text-center text-sm dark:text-gray-300 p-2">Paid</td>
-                                    <td class="text-center text-sm p-2 text-green-500">Active</td>
+                                    <td data-label="Course name" class="text-center text-sm dark:text-gray-300 p-2">Html avanced</td>
+                                    <td data-label="Course number" class="text-center text-sm dark:text-gray-300 p-2">8631</td>
+                                    <td data-label="Payment" class="text-center text-sm dark:text-gray-300 p-2">Paid</td>
+                                    <td data-label="Status" class="text-center text-sm p-2 text-green-500">Active</td>
                                     <td class="text-center text-sm p-2 text-blue-500">Detail</td>
                                 </tr>
                             </tbody>
