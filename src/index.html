@@ -4,67 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="/dist/output.css">
-    <script src="https://kit.fontawesome.com/5c6227773e.js" crossorigin="anonymous"></script>
     <title>Admin</title>
 </head>
 
-<body class="h-screen">
-    <header>
-        <nav class="shadow-lg h-16 p-4 flex items-center bg-white dark:bg-neutral-800">
-            <button class="dark:text-white"><i class="fa-solid fa-bars"></i></button>
-            <div class="flex items-center rounded-md overflow-hidden">
-                <button class="bg-indigo-700 text-white p-2">sun</button>
-                <button class=" text-white p-2">moon</button>
+<body class="min-h-screen bg-slate-300 dark:bg-neutral-950">
+    <header
+        class="sticky top-0 z-10 px-6 py-2 flex items-center bg-white dark:bg-neutral-800 shadow-lg dark:shadow-neutral-950">
+        <nav class="w-full flex items-center justify-between">
+            <h3 class="text-2xl font-extrabold"><span class="dark:text-white">Admin</span><span class="text-pink-500">Pro</span></h3>
+            <button class="block md:hidden dark:text-white text-lg md:invisible" id="btn-menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="flex bg-slate-300 dark:bg-neutral-950 relative items-center rounded-md overflow-hidden">
+                <button class="relative z-10 bg-transparent text-white p-2 px-4" id="btn-sun"><i class="fa-solid fa-sun"></i></button>
+                <button class="relative z-10 bg-transparent text-white p-2 px-4" id="btn-moon"><i class="fa-solid fa-moon"></i></button>
+                <div class="bg-pink-500 translate-x-0 transition-transform duration-500 absolute h-full w-6/12 z-0" id="toggle"></div>
+            </div>
+            <div class="flex gap-4 items-center">
+                <p class="dark:text-white">Hey, <span class="font-bold">Jon Doe</span> <small
+                        class="dark:text-white block">admin</small></p>
+
+                <img src="/assets/images/profile.png" alt="profile" class="w-12 h-12 rounded-full object-cover"
+                    srcset="">
             </div>
         </nav>
     </header>
 
-    <main class="bg-white dark:bg-neutral-950 h-full">
-        <aside aria-label="">
-            <ul class="w-64 flex flex-col dark:bg-neutral-800 h-screen shadow-xl overflow-hidden">
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span class="text-white"><i class="fa-solid fa-chart-line"></i></span>
+    <main class="grid grid-cols-[1fr] gap-6 md:px-6 md:py-8 md:grid-cols-[auto,1fr] h-[calc(100%-4rem)]">
+        <aside aria-label="" id="menu"
+            class="w-64 h-full fixed z-20 translate-x-[-100%] transition-transform duration-500 md:translate-x-0 md:sticky md:top-50 md:z-0 md:rounded-lg md:w-44 dark:bg-neutral-900 overflow-hidden">
+            <ul class="flex flex-col py-12 bg-white dark:bg-neutral-800 h-[calc(100%-2rem)] rounded-b-3xl">
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-chart-line"></i></span>
                     <span>Dashboard</span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span class="text-white"><i class="fa-solid fa-user"></i></span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span ><i class="fa-solid fa-user"></i></span>
                     <span>Users</span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span class="text-white"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span ><i class="fa-solid fa-clock-rotate-left"></i></span>
                     <span>History</span>
                 </li>
-                <li class="text-gray-300 bg-neutral-900 border-s-4 ps-8  border-indigo-700 flex gap-4 items-center p-4 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
+                <li
+                    class="dark:text-gray-300 bg-slate-300 dark:bg-neutral-900 border-s-4 ps-8  border-pink-500 flex gap-4 items-center p-4 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-chart-pie"></i></span>
                     <span>Analytics</span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8  hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
-                    <span>Tickets</span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8  hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-ticket"></i></span>
+                    <span>Tickets <span class="bg-pink-500 text-white font-semibold rounded-md px-1 text-xs">34</span></span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-clipboard-check"></i></span>
                     <span>Sale List</span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-circle-exclamation"></i></span>
                     <span>Reports</span>
                 </li>
-                <li class="text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
+                <li
+                    class="dark:text-gray-300 flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-gear"></i></span>
                     <span>Settings</span>
                 </li>
-                <li class="text-gray-300 justify-end flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-indigo-300 transition-all duration-500 cursor-pointer">
-                    <span>icon</span>
+                <li
+                    class="dark:text-gray-300 justify-self-end flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer">
+                    <span><i class="fa-solid fa-right-from-bracket"></i></span>
                     <span>Logout</span>
                 </li>
             </ul>
         </aside>
-        <section></section>
-        <aside></aside>
+        <div class=" flex flex-col gap-4 px-4 py-8 md:px-0 md:py-0">
+
+            <section>
+                <h2 class="text-3xl font-bold dark:text-white mb-4">Analytics</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <article
+                            class="w-full px-4 py-8 flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg">
+                            <div>
+                                <p class="dark:text-white text-lg font-bold mb-2">Total sales</p>
+                                <p class="dark:text-white text-2xl font-bold">$ 65,024</p>
+                            </div>
+                            <div class="progress-bar before:content-['85%']"></div>
+                        </article>
+                        <article
+                            class="w-full px-4 py-8 flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg">
+                            <div>
+                                <p class="dark:text-white text-lg font-bold mb-2">Total sales</p>
+                                <p class="dark:text-white text-2xl font-bold">$ 65,024</p>
+                            </div>
+                            <div class="progress-bar progress-bar-2 before:content-['64%']"></div>
+                        </article>
+                        <article
+                            class="w-full px-4 py-8 flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg">
+                            <div>
+                                <p class="dark:text-white text-lg font-bold mb-2">Total sales</p>
+                                <p class="dark:text-white text-2xl font-bold">$ 65,024</p>
+                            </div>
+                            <div class="progress-bar progress-bar-3 before:content-['95%']"></div>
+                        </article>
+                    </div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold dark:text-white mb-4">New Users</h1>
+                    <article
+                        class="w-full px-4 py-8 grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 items-center justify-center bg-white dark:bg-neutral-900 rounded-lg">
+                        <div class="flex flex-col gap-1 justify-center items-center">
+                            <img src="/assets/images/profile1.jpeg" class="w-20 h-20 object-cover rounded-full"
+                                alt="profile1" srcset="">
+                            <p class="dark:text-white text-xl font-bold text-center">Amir</p>
+                            <p class="dark:text-white text-sm text-center">54 Min Ago</p>
+                        </div>
+                        <div class="flex flex-col gap-1 justify-center items-center">
+                            <img src="/assets/images/profile2.jpg" class="w-20 h-20 object-cover rounded-full"
+                                alt="profile2" srcset="">
+                            <p class="dark:text-white text-xl font-bold text-center">Jack</p>
+                            <p class="dark:text-white text-sm text-center">54 Min Ago</p>
+                        </div>
+                        <div class="flex flex-col gap-1 justify-center items-center">
+                            <img src="/assets/images/profile3.jpg" class="w-20 h-20 object-cover rounded-full"
+                                alt="profile1" srcset="">
+                            <p class="dark:text-white text-xl font-bold text-center">Jon</p>
+                            <p class="dark:text-white text-sm text-center">54 Min Ago</p>
+                        </div>
+                        <div class="flex flex-col gap-1 justify-center items-center">
+                            <img src="/assets/images/plus.png" class="w-20 h-20 object-cover rounded-full"
+                                alt="profile1" srcset="">
+                            <p class="dark:text-white text-xl font-bold text-center">More</p>
+                            <p class="dark:text-white text-sm text-center">New user</p>
+                        </div>
+                    </article>
+            </section>
+        </div>
     </main>
-    <script src="https://kit.fontawesome.com/5c6227773e.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

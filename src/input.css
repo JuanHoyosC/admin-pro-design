@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: transparent;
+    background: 
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(54, 39, 70) 85%, rgba(255, 192, 203, 0) 0);    
+}
+
+.progress-bar-2 {
+    background: 
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(70, 39, 52) 64%, rgba(255, 192, 203, 0) 0);    
+}
+
+.progress-bar-3 {
+    background: 
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(39, 45, 70) 95%, rgba(255, 192, 203, 0) 0);    
+}
+
+.progress-bar::before {
+    content: "75%";
+    position: absolute;
+    color: #fff;
+}

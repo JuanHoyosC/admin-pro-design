@@ -12,7 +12,5 @@
   "devDependencies": {
     "tailwindcss": "^3.3.5"
   },
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.4.2"
-  }
+  "dependencies": {}
 }
