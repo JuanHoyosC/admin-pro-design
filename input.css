@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    min-height: 75px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.progress-bar::before {
+    content: "75%";
+    position: absolute;
+    color: #000000;
+}
+
+.progress-bar-light-1 {
+    background:
+        radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(194 137 255) 85%, rgba(255, 192, 203, 0) 0);
+}
+
+.progress-bar-light-2 {
+    background:
+        radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(255 107 169) 64%, rgba(255, 192, 203, 0) 0);
+}
+
+.progress-bar-light-3 {
+    background:
+        radial-gradient(closest-side, #fff 60%, transparent 100% 100%),
+        conic-gradient(rgb(98 128 255) 95%, rgba(255, 192, 203, 0) 0);
+}
+
+@layer utilities {
+    .progress-bar-dark-1 {
+        background:
+            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+            conic-gradient(rgb(54, 39, 70) 85%, rgba(255, 192, 203, 0) 0);
+    }
+
+    .progress-bar-dark-2 {
+        background:
+            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+            conic-gradient(rgb(70, 39, 52) 64%, rgba(255, 192, 203, 0) 0);
+    }
+
+    .progress-bar-dark-3 {
+        background:
+            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+            conic-gradient(rgb(39, 45, 70) 95%, rgba(255, 192, 203, 0) 0);
+    }
+
+    .progress-bar-dark::before {
+        content: "75%";
+        position: absolute;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
