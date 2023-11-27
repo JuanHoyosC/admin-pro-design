@@ -553,6 +553,30 @@ video {
   color: rgb(249 168 212 / var(--tw-text-opacity));
 }
 
+.card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+:is(.dark .card) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
 .fixed {
   position: fixed;
 }
@@ -700,10 +724,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -718,10 +738,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-center {
@@ -754,10 +770,6 @@ video {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.justify-self-end {
-  justify-self: end;
 }
 
 .overflow-hidden {
@@ -864,16 +876,22 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.ps-8 {
-  padding-inline-start: 2rem;
 }
 
 .pt-8 {
@@ -1002,18 +1020,18 @@ video {
 
 .progress-bar-light-1 {
   background:
-        radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(194 137 255) 85%, rgba(255, 192, 203, 0) 0);
+    radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(194 137 255) 85%, rgba(255, 192, 203, 0) 0);
 }
 
 .progress-bar-light-2 {
   background:
-        radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(255 107 169) 64%, rgba(255, 192, 203, 0) 0);
+    radial-gradient(closest-side, #fff 60%, transparent 100% 100%), conic-gradient(rgb(255 107 169) 64%, rgba(255, 192, 203, 0) 0);
 }
 
 .progress-bar-light-3 {
   background:
-        radial-gradient(closest-side, #fff 60%, transparent 100% 100%),
-        conic-gradient(rgb(98 128 255) 95%, rgba(255, 192, 203, 0) 0);
+    radial-gradient(closest-side, #fff 60%, transparent 100% 100%),
+    conic-gradient(rgb(98 128 255) 95%, rgba(255, 192, 203, 0) 0);
 }
 
 @media screen and (max-width: 600px) {
@@ -1092,16 +1110,6 @@ video {
   content: var(--tw-content);
 }
 
-.hover\:translate-x-3:hover {
-  --tw-translate-x: 0.75rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:text-pink-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
-}
-
 :is(.dark .dark\:border-neutral-800) {
   --tw-border-opacity: 1;
   border-color: rgb(38 38 38 / var(--tw-border-opacity));
@@ -1143,20 +1151,20 @@ video {
 
 :is(.dark .dark\:progress-bar-dark-1) {
   background:
-            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
-            conic-gradient(rgb(54, 39, 70) 85%, rgba(255, 192, 203, 0) 0);
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(54, 39, 70) 85%, rgba(255, 192, 203, 0) 0);
 }
 
 :is(.dark .dark\:progress-bar-dark-2) {
   background:
-            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
-            conic-gradient(rgb(70, 39, 52) 64%, rgba(255, 192, 203, 0) 0);
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(70, 39, 52) 64%, rgba(255, 192, 203, 0) 0);
 }
 
 :is(.dark .dark\:progress-bar-dark-3) {
   background:
-            radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
-            conic-gradient(rgb(39, 45, 70) 95%, rgba(255, 192, 203, 0) 0);
+      radial-gradient(closest-side, #171717 60%, transparent 100% 100%),
+      conic-gradient(rgb(39, 45, 70) 95%, rgba(255, 192, 203, 0) 0);
 }
 
 :is(.dark .dark\:progress-bar-dark)::before {
@@ -1288,4 +1296,3 @@ video {
     grid-template-columns: auto 1fr auto;
   }
 }
-  
