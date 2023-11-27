@@ -55,7 +55,6 @@
     }
 
     .progress-bar-dark::before {
-        content: "75%";
         position: absolute;
         color: #fff;
     }

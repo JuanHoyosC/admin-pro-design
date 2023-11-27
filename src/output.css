@@ -879,11 +879,6 @@ video {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1142,7 +1137,6 @@ video {
 }
 
 :is(.dark .dark\:progress-bar-dark)::before {
-  content: "75%";
   position: absolute;
   color: #fff;
 }
