@@ -60,6 +60,16 @@
     }
 }
 
+@layer components {
+
+  .menu-item {
+    @apply flex gap-4 items-center p-4 ps-8 hover:translate-x-3 hover:text-pink-300 transition-transform duration-500 cursor-pointer
+  }
+  .menu-active {
+    @apply bg-slate-300 dark:bg-neutral-900 border-s-4 border-pink-500
+  }
+}
+
 @media screen and (max-width: 600px) {
     table {
       border: 0;
